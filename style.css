@@ -1,10 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Manufacturing+Consent&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+* {
+    margin: 0;
+    font-family: Cormorant;
+    --sidebar-width: 33vw;
+}
 .container {
     display: flex;
     height: 100vh;
 }
 
 .sidebar {
-    width: 33vw;
+    width: var(--sidebar-width);
+    background-image: url('assets/background.jpg');
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .main-content {
@@ -13,7 +24,6 @@
     flex-direction: column;
 }
 .main-content > * {
-    border-style: solid;
     padding: 20px 15px;
 }
 
@@ -21,13 +31,118 @@ form {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    height: 28vh;
+    height: 24vh;
     align-content: flex-start;
+    width: 40vw;
+    justify-content: space-between;
+    margin-left: 30px;
 }
-form > * {
-    flex: 0 0 25%;
-    box-sizing: border-box;
+.form-container {
+    box-shadow: inset 2px -2px 5px rgba(0, 0, 0, 0.3);
+
 }
 .top-container, .bottom-container {
-    height: 36vh;
+    height: 38vh;
+    background-color: #f8fafc;
+}
+.image-credit {
+    color: #ebebeb;
+    text-align: center;
+    margin: 20px;
+}
+
+a.credit {
+    color: #ebebeb;
+    opacity: 0.78;
+}
+
+.message, .advert {
+    font-size: 3.2vh;
+    font-weight: bold;
+}
+
+.advert {
+    width: 50vw;
+    margin: 30px;
+}
+
+.message {
+    margin-bottom: 15px;
+    margin-left: 30px;
+}
+
+legend {
+    font-variant: small-caps;
+    font-size: 2vh;
+    margin-bottom: 4px;
+}
+.field {
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+a#login {
+    color: #233612;
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+input {
+    width: min(27vh, 300px);
+    height: 25px;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 0.1px;
+    border-color: grey;
+
+}
+
+button {
+    margin-left: 30px;
+    padding: 10px 55px;
+    border-radius: 10px;
+    background-color: #233612;
+    color: #ebebeb;
+    font-size: 2.1vh;
+}
+
+.bottom-text {
+    font-size: 1.8vh;
+    margin: 20px 30px;
+}
+
+.logo-container {
+    margin-top: 120px;
+    width: var(--sidebar-width);
+    height: 20vh;
+    background-color: black;
+    opacity: 0.5;
+    display: flex;
+}
+.logo {
+    background-image: url("assets/logo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: calc(0.44 * var(--sidebar-width));
+    height: 20vh;
+}
+.title {
+    color: white;
+    width: calc(0.66 * var(--sidebar-width));
+    font-size: calc(0.5*calc(0.66 * var(--sidebar-width)));
+    font-family: "Manufacturing Consent";
+    display: flex;
+    align-items: center;
+}
+
+input:focus {
+    border-color: aquamarine;
+    box-shadow: inset 2px -2px 5px rgba(0, 0, 0, 0.3);
+}
+
+input:invalid {
+    border-color: red !important;
 }
